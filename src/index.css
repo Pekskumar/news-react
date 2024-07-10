@@ -1,13 +1,267 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: url('./Assets/Images/nature1.jpg');
+  background-size: cover; */
+  overflow: hidden;
+  background: #f6f7f9 !important;
+
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.navbar {
+  box-shadow: inset 0 -1px 0 0 #eaeaea;
+  transform: translateZ(0);
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+  backdrop-filter: saturate(180%) blur(5px);
+  background: hsla(0, 0%, 100%, 0.8);
+  height: 64px;
+  position: sticky !important;
+  top: 0;
+  z-index: 1;
+}
+.SingleCard {
+  /* height: 180px; */
+  border-radius: 15px;
+  padding: 16px;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.02), 0 4px 6px rgba(0, 0, 0, 0.02),
+    inset 0 0 0 6px var(--accents-1);
+  /* background: linear-gradient(180deg, #fff 0, #eaeaea 65.62%); */
+  /* cursor: pointer; */
+  position: relative;
+  background: #fff;
+  /* transition: background .15s ease; */
+}
+/* .SingleCard:before {
+  background: conic-gradient(
+    from 131deg at 50% 50%,
+    #eaeaea 0deg,
+    #eaeaea 176deg,
+    #61dafb 193deg,
+    #eaeaea 297deg,
+    #eaeaea 40turn
+  );
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.2px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+} */
+/* .SingleCard:hover {
+  background: linear-gradient(180deg, #fff, rgba(0, 0, 0, 0.02) 65.62%);
+} */
+.CardlistChild {
+  position: relative;
+  padding: 1em;
+  border-radius: 15px;
+  border: 1px solid #fff;
+  background: #fff;
+  cursor: pointer;
+  min-height: 400px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.CardlistChild:hover {
+  border: 1px solid #eaeaea;
+}
+.CardlistChild img {
+  border-radius: 15px;
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  overflow: hidden;
+}
+.google-map-one {
+  height: 300px;
+}
+.publishedAt::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  background-color: #333;
+  border-radius: 50%;
+  left: -11px;
+  top: 11px;
+}
+.author {
+  position: absolute;
+  bottom: 3px;
+  right: 12px;
+  font-style: italic;
+  font-size: 10px;
+}
+.temperature {
+  display: flex;
+  align-items: baseline;
+}
+
+.temperature-value {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.temperature-unit {
+  font-size: 1.5rem;
+  margin-left: 0.2rem;
+}
+.celcius-card {
+  color: #fff;
+  border-radius: 15px;
+  padding: 8px;
+  background: rgba(241, 233, 215, 0.2);
+  width: 88px;
+  margin: 0 5px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+body .nav-tabs {
+  border: 0;
+}
+.wether-card .nav-tabs .nav-link {
+  background: rgba(241, 233, 215, 0.2);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.celcius-card:first-child {
+  margin-left: 0;
+}
+body table td {
+  background-color: transparent !important;
+}
+.wether-card {
+  border-radius: 15px;
+  padding: 16px;
+  color: #fff;
+  /* box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.02), 0 4px 6px rgba(0, 0, 0, 0.02),
+    inset 0 0 0 6px #eaeaea; */
+}
+body table {
+  margin: 0 !important;
+  border: 0;
+}
+body table td {
+  border: 0;
+}
+.right-tabs-one {
+  height: 100vh;
+}
+.left-tabs-one {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: calc(100vh - 95px);
+  padding-bottom: 20px;
+}
+.right-tabs-one .tab-content {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: calc(100vh - 80px);
+  padding-bottom: 20px;
+}
+.right-tabs-one .nav-tabs .nav-link {
+  background-color: transparent !important;
+  border: 0 !important;
+  color: gray !important;
+  text-transform: capitalize;
+  height: 60px;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.right-tabs-one .nav-tabs .nav-link.active {
+  color: #000 !important;
+  position: relative;
+}
+.right-tabs-one .nav-tabs .nav-link.active::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 40px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Center the element */
+  background-color: #000;
+  border-radius: 80px;
+}
+.logo-one img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.wether-card:before {
+  position: absolute;
+  content: "";
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /* background: url("./Assets/Images/nature.jpg") !important; */
+  /* background: url("./Assets/Images/nature1.jpg") !important; */
+  background: url("./Assets/Images/cloud1.jpg") !important;
+  background-size: cover !important;
+  z-index: -1;
+}
+
+.big-cloud-icon img {
+  height: 70px;
+  width: 110px;
+  object-fit: cover;
+}
+.small-cloud-icon img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+}
+.left-tabs-one::-webkit-scrollbar {
+  width: 0;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .right-tabs-one,body {
+    overflow: auto;
+  }
+  .left-tabs-one {
+    height: auto;
+    /* overflow: auto; */
+    margin-bottom: 20px;
+  }
+  .right-tabs-one{
+    margin-top: 20px;
+
+  }
 }
