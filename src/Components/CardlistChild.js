@@ -9,8 +9,8 @@ const CardlistChild = (props) => {
       <Link className="CardlistChild" to={props?.data?.url} target="_blank">
         <img
           src={
-            props?.data?.urlToImage !== "" && props?.data?.urlToImage !== null
-              ? props?.data?.urlToImage
+            props?.data?.image !== "" && props?.data?.image !== null
+              ? props?.data?.image
               : Imgsr
           }
           onError={({ currentTarget }) => {
