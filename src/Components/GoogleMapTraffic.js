@@ -60,7 +60,7 @@ function GoogleMapTraffic() {
 
   return (
     <LoadScript
-      googleMapsApiKey="AIzaSyDCTqQg08irT8djGDqiwQCS3Xcf9B2Hsgc"
+      googleMapsApiKey="API"
       libraries={lib}
     >
       {center ? (
